@@ -19,43 +19,57 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>        
-        <div class="bs-example">
+<body>        
+  <div class="bs-example">
     <div id="carousel-example-captions" class="carousel slide" data-ride="carousel">
+      
+      <!-- Carrossel  -->
       <ol class="carousel-indicators">
         <li data-target="#carousel-example-captions" data-slide-to="0" class="active"></li>
         <li data-target="#carousel-example-captions" data-slide-to="1" class=""></li>
         <li data-target="#carousel-example-captions" data-slide-to="2" class=""></li>
       </ol>
+
       <div class="carousel-inner">
+
+        <!-- Imagem 1 -->
         <div class="item active">
            <img src="imagens/img1.jpg" alt="">       
           <div class="carousel-caption">
-            <h3>Imagem 1</h3>
-            <p>Legenda Legenda Legenda Legenda Legenda Legenda</p>
+            <h3 style="color: yellow">Imagem 1</h3>
+            <p style= font-size:20px; font-family:tahoma;>Legenda Legenda Legenda Legenda Legenda Legenda</p>
           </div>
         </div>
+
+        <!-- Imagem 2 -->
         <div class="item">
             <img src="imagens/img2.jpg" alt="">
           <div class="carousel-caption">
-            <h3>Imagem 2</h3>
-            <p>Legenda Legenda Legenda Legenda Legenda Legenda</p>
+            <h3 style="color: yellow ">Imagem 2</h3>
+            <p style= font-size:20px; font-family:tahoma;>Legenda Legenda Legenda Legenda Legenda Legenda</p>
           </div>
         </div>
+
+        <!-- Imagem 3 -->
         <div class="item">
           <img src="imagens/img3.jpg" alt="">
           <div class="carousel-caption">
-            <h3>Imagem 3</h3>
-            <p>Legenda Legenda Legenda Legenda Legenda Legenda .</p>
+            <h3 style="color: yellow ">Imagem 3</h3>
+            <p style= font-size:20px; font-family:tahoma; >Legenda Legenda Legenda Legenda Legenda Legenda</p>
           </div>
         </div>
+
       </div>
+      
+      <!-- Botão esquerdo -->
       <a class="left carousel-control" href="#carousel-example-captions" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left"></span>
       </a>
+      <!-- Botão direito -->
       <a class="right carousel-control" href="#carousel-example-captions" data-slide="next">
         <span class="glyphicon glyphicon-chevron-right"></span>
       </a>
+
     </div>
   </div>
  
@@ -63,21 +77,23 @@
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <<script>
-      
+    
+    <!--Script -->
+    <script> 
       jQuery(function ($)
        {
           $('.carousel').carousel();
           var caption = $('div.item:nth-child(1) .carousel-caption');
           $('.new-caption-area').html(caption.html());
           caption.css('display', 'none');
-          $(".carousel").on('slide.bs.carousel', function (evt) 
-          {
+          $(".carousel").on('slide.bs.carousel', function (evt) {
               var caption = $('div.item:nth-child(' + ($(evt.relatedTarget).index() + 1) + ') .carousel-caption');
-          $('.new-caption-area').html(caption.html());
-          caption.css('display', 'none');});
-    });
+              $('.new-caption-area').html(caption.html());
+              caption.css('display', 'none');});
+      });
     </script>
+    <!--Script -->
+
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
   </body>
